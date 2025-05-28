@@ -32,3 +32,16 @@ const listaProductos = [
     new Producto("Chocolate", "P019", [oct1, oct3]),
     new Producto("Galletas Rellenas", "P020", [oct1, oct5, oct3])
 ];
+
+const boton = document.getElementById("boton");
+boton.addEventListener("click", ()=>{
+    const inputTexto = document.getElementById("input-texto").value;
+    const objeto = Buscar(inputTexto);
+    localStorage.setItem("datosProducto", JSON.stringify(objeto));
+    window.location.href = "../Paginas/Producto.html";
+})
+
+function Buscar(codigo){
+    let ans = listaProductos.filter((item)=> item.codigo.includes(codigo));
+    return ans;
+}

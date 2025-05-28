@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const datos = JSON.parse(localStorage.getItem("datosProducto"));
+
+        if (datos) {
+            const h1 = document.createElement("h1");
+            h1.textContent = `Bienvenido, ${datos[0].nombre}`;
+            document.body.appendChild(h1);
+
+            
+        } else {
+            document.body.innerHTML = "<p>No hay datos disponibles.</p>";
+        }
+        });
+    </script>
+</head>
+<body>
+    <p>Producto</p>
+    <main>
+        <section>
+            
+        </section>
+    </main>
+</body>
+</html>

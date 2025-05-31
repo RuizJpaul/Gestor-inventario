@@ -4,28 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto</title>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-        const datos = JSON.parse(localStorage.getItem("datosProducto"));
-
-        if (datos) {
-            const h1 = document.createElement("h1");
-            h1.textContent = `Bienvenido, ${datos[0].nombre}`;
-            document.body.appendChild(h1);
-        } else {
-            document.body.innerHTML = "<p>No hay datos disponibles.</p>";
-        }
-        });
-    </script>
+    <link rel="stylesheet" href="../Estilos/styleProducto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p>Producto</p>
+    <header>
+        <nav>
+            <img src="../Images/carrito-de-compras.png" alt="Logo">
+        </nav>
+    </header>
     <main>
         <section>
-            <h1 class="nombre"></h1>
-            <p></p>
-            <p></p>
+            <div id="contenedor">
+                <div id="contenedor-info">
+                    <h1>Producto</h1>
+                    <p id="nombre"></p>
+                    <p id="codigo"></p>
+                    <p id="descripcion" class="detalle"></p>
+                    <p id="peso" class="detalle"></p>
+                    <p id="precio" class="detalle"></p>
+                </div>
+                <div id="contenedor-octagonos">
+                    <!-- <div id="cuadro-octagono">
+                        <img src="" alt="Octagono" id="imagen-octagono">
+                    </div> -->
+                </div>
+            </div>
+            <div id="cuadro-producto">
+                <img src="" alt="Producto" id="imagen-producto">
+            </div>
         </section>
+        <button><a href="../index.html">Volver</a></button>
     </main>
+    <script src="../Js/mainProducto.js"></script>
 </body>
 </html>
